@@ -1,0 +1,45 @@
+/* !
+    * fullPage 4.0.10
+    * https://github.com/alvarotrigo/fullPage.js
+    *
+    * @license GPLv3 for open source use only
+    * or Fullpage Commercial License for commercial use
+    * http://alvarotrigo.com/fullPage/pricing/
+    *
+    * Copyright (C) 2021 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
+    */
+
+body{
+    padding-top: 70px;
+    color: black;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.slide{
+    padding: 4rem;
+}
+
+.main_section{
+    padding: 0 13rem;
+    text-align: center;
+}
+
+.navbar{
+    color: black;
+    background-color: white;
+}
+
+.navbar-brand{
+    color: black;
+}
+
+.nav-link{
+    color: black;
+}
