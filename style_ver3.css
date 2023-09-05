@@ -31,20 +31,15 @@ body{
     font-size: 3rem;
 }
 
-/* .main_section{
-    padding: 10% 5%;
-    text-align: center;
-} */
-
 .navbar{
-    color: black;
-    background-color: white;
+    color: white;
+    opacity: 100%;
 }
 
 .navbar-brand{
-    color: black;
+    color: white;
 }
 
 .nav-link{
-    color: black;
+    color: white;
 }

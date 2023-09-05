@@ -12,3 +12,32 @@ $(document).ready(function () {
 	    slidesNavPosition: 'bottom',
     });
 });
+
+/* const animation = anima({
+            targets: '.mandala-container',
+            transform: ['rotate(0deg)', 'rotate(360deg)'],
+            easing: 'linear',
+            duration: 500000, // 500s
+            loop: true,
+        });
+
+        // Start the animation
+        animation.play(); */
+
+VANTA.HALO({
+  el: "#vanta_back",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  backgroundColor: 0x0
+})
+
+
+
+$(document).ready(function(){
+    $('[data-bs-toggle="offcanvas"]').on('click', function () {
+      $('.offcanvas-collapse').toggleClass('open');
+    });
+  });
