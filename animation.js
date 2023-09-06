@@ -40,4 +40,21 @@ $(document).ready(function(){
     $('[data-bs-toggle="offcanvas"]').on('click', function () {
       $('.offcanvas-collapse').toggleClass('open');
     });
-  });
+});
+  
+const aboutLink = document.getElementById('aboutLink');
+const skillsLink = document.getElementById('skillz');
+const contactLink = document.getElementById('contactLink');
+const offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasDarkNavbar'));
+
+aboutLink.addEventListener('click', () => {
+    offcanvas.hide();
+});
+
+skillsLink.addEventListener('click', () => {
+    offcanvas.hide();
+});
+
+contactLink.addEventListener('click', () => {
+    offcanvas.hide();
+});

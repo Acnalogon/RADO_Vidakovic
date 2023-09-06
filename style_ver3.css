@@ -43,3 +43,22 @@ body{
 .nav-link{
     color: white;
 }
+
+/* Custom CSS to make the offcanvas full-screen */
+#offcanvasDarkNavbar {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(50);
+    z-index: 1050;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    color: black;
+    /* Ensure it's above other elements */
+}
