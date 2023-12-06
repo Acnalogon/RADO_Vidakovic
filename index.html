@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="style_ver4.css" />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css"
@@ -25,7 +27,7 @@
       <span class="menu-icon__line menu-icon__line-right"></span>
     </div>
 
-    <div class="nav">
+    <div class="nav" id="nav_">
       <div class="nav__content">
         <ul class="nav__list" id="myMenu">
           <li data-menuanchor="Home" class="nav__list-item">
@@ -44,51 +46,55 @@
       </div>
     </div>
 
-    <div class="site-content">
+    <div class="site-content" id="site_">
       <!-- <h1 class="site-content__headline">Another menu concept</h1> -->
 
       <div id="fullpage">
         <div class="section" data-anchor="Home" id="vanta_back">
           <h1>About_Me</h1>
-          <button><a href="#About_Me">Read_More</a></button>
+          <button>
+            <a data-menuanchor="About_Me">Read_More</a>
+          </button>
         </div>
 
         <div class="section" data-anchor="About_Me">
           <main>
             <section>
-              <!--TODO:fix the amount of divs      -->>
+              <!--TODO:fix the amount of divs      -->
 
               <!-- <button id="toggle-about-me">Show About Me</button> -->
-              <article id="about-me" class="about_me_article">
+              <article id="about-me" class="lineUp">
                 I was born on November 13th, 1996 in Bosnia and Herzegovina and
                 have a diverse background in various roles that have allowed me
-                to develop key skills and qualities that are valuable in a web
-                development position. My extensive experience working with
-                people has honed my communication skills and ability to work
-                effectively in a team. Additionally, I have excellent computer
-                skills, including proficiency in programming languages such as
-                Python, Java, and web development technologies like HTML, CSS,
-                JavaScript, Bootstrap, NODE.js, and REST. I am highly
-                disciplined, having developed this trait through years of
-                diverse work experience, and fluent in German (C1 level),
-                English (native level), and Bosnian/Croatian/Serbian (native
-                level). My work experience ranges from roles in the food and
-                retail industries to positions in customer service and event
-                management. My most recent experience at Doppler Mineralöle Gmbh
-                as a gas station attendant and salesperson, along with my
-                previous role as a cook at McDonald’s, has taught me how to work
-                in fast-paced environments and provide excellent customer
-                service. My experience at Shell and FITINN GmbH has further
-                developed my ability to work in a team and handle
-                responsibilities effectively. My time at ManpowerGroup GmbH as a
-                service employee and at Eventservice Parkas GmbH as an event
-                coordinator has honed my customer service and problem-solving
-                skills. I am currently completing my Bachelor's degree in
-                Software & Information Engineering at TU Wien, where I am
-                learning the latest web development technologies and techniques.
-                These experiences and skills make me a strong candidate for a
-                web developer position and I am eager to bring my talents to a
-                dynamic and innovative company.
+                to develop key skills and qualities that are valuable in a
+                <span>web development</span> position. My extensive experience
+                working with people has honed my
+                <span>communication skills</span> and ability to
+                <span>work effectively in a team</span>. Additionally, I have
+                excellent <span>computer skills</span>, including proficiency in
+                <span>programming languages</span> such as Python, Java, and web
+                development technologies like HTML, CSS, JavaScript, Bootstrap,
+                NODE.js, and REST. I am highly disciplined, having developed
+                this trait through years of diverse work experience, and fluent
+                in German (C1 level), English (native level), and
+                Bosnian/Croatian/Serbian (native level). My work experience
+                ranges from roles in the food and retail industries to positions
+                in customer service and event management. My most recent
+                experience at Doppler Mineralöle Gmbh as a gas station attendant
+                and salesperson, along with my previous role as a cook at
+                McDonald’s, has taught me how to work in fast-paced environments
+                and provide excellent customer service. My experience at Shell
+                and FITINN GmbH has further developed my ability to work in a
+                team and handle responsibilities effectively. My time at
+                ManpowerGroup GmbH as a service employee and at Eventservice
+                Parkas GmbH as an event coordinator has honed my customer
+                service and problem-solving skills. I am currently completing my
+                Bachelor's degree in
+                <span>Software & Information Engineering</span> at TU Wien,
+                where I am learning the latest web development technologies and
+                techniques. These experiences and skills make me a strong
+                candidate for a web developer position and I am eager to bring
+                my talents to a dynamic and innovative company.
               </article>
             </section>
           </main>
@@ -96,7 +102,7 @@
 
         <div class="section" data-anchor="My_Skills">
           <section>
-            <div class="slide" data-anchor="Front_End">
+            <div class="slide">
               <h2>Front_End</h2>
 
               <article>
@@ -111,7 +117,7 @@
               </article>
             </div>
 
-            <div class="slide" data-anchor="Back_End">
+            <div class="slide">
               <h2>Back_End</h2>
 
               <article>
@@ -125,7 +131,7 @@
               </article>
             </div>
 
-            <div class="slide" data-anchor="Programming_Languages">
+            <div class="slide">
               <h2>Programming_Languages</h2>
 
               <article>
@@ -144,6 +150,7 @@
 
         <div class="section" data-anchor="Contact_Me">
           <section>
+            <article>
             <h2>Contact_Me</h2>
             <form
               action="mailto:rado.pro1@protonmail.com"
@@ -182,6 +189,7 @@
               </ul>
             </footer>
           </section>
+          </article>
         </div>
       </div>
     </div>
@@ -193,17 +201,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
-      integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.js"
       integrity="sha512-ekWIiATJSaL5RWmBSap8JDgTMCIBCso5UFovYoMix+a4qFcVDryBcCt4P0kJA4kA0YtmnJuzfTcmb9+TIznIlg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
+      integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script src="animation.js"></script>
   </body>
 </html>

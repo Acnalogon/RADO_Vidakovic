@@ -4,6 +4,7 @@ body {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 #vanta_back {
   width: 100vw;
@@ -22,6 +23,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* z-index: 2; */
 }
 
 .site-content__headline {
@@ -34,7 +36,7 @@ section {
   height: 30px;
   width: 30px;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   left: 50px;
   top: 30px;
   cursor: pointer;
@@ -59,8 +61,10 @@ section {
 }
 
 .nav {
+  visibility: hidden;
   position: fixed;
   z-index: 1;
+  line-height: normal;
 }
 
 a {
@@ -180,4 +184,26 @@ body.nav-active .nav__list-item:nth-child(3) {
 
 body.nav-active .nav__list-item:nth-child(4) {
   transition-delay: 0.9s;
+}
+
+article span {
+  background-color: white;
+  color: black;
+  padding: 3px 8px;
+}
+/* Initial state of the article */
+article {
+  opacity: 0;
+  transform: translateX(-50px); /* Starts off-screen */
+  visibility: hidden; /* Initially hidden, but takes up space */
+  transition: all 0.5s ease-in-out;
+}
+
+/* Keyframes for animation */
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
 }
