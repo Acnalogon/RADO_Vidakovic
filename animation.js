@@ -39,19 +39,6 @@ const app = (() => {
 
   init();
 })();
-/* 
-//viewport detection--------
-document.addEventListener("scroll", function () {
-  var article = document.querySelector("article");
-  var articlePosition = article.getBoundingClientRect();
-
-  // Check if article is in the viewport
-  if (articlePosition.top < window.innerHeight && articlePosition.bottom >= 0) {
-    article.style.opacity = "1";
-    article.style.transform = "translateX(0)";
-    article.style.visibility = "visible";
-  }
-}); */
 
 //fullpage.js animation code -----------
 $(document).ready(function () {
@@ -82,6 +69,7 @@ $(document).ready(function () {
       if (articleInSection) {
         animateArticle(articleInSection);
       }
+      animateElements(loadedSection);
     },
 
     afterSlideLoad: function (section, origin, destination, direction) {
@@ -91,6 +79,7 @@ $(document).ready(function () {
       if (articleInSlide) {
         animateArticle(articleInSlide);
       }
+      animateElements(loadedSlide);
     },
   });
 });
@@ -101,6 +90,47 @@ function animateArticle(article) {
   article.style.visibility = "visible";
   article.style.transition =
     "opacity 0.5s ease-in-out, transform 0.5s ease-in-out";
+}
+
+function animateElements(sectionOrSlide) {
+  // Animate Headers (h1 and h2)
+  var headers = sectionOrSlide.querySelectorAll("h1.ml14, h2.ml14");
+  headers.forEach((header) => {
+    animateHeader(header);
+  });
+}
+
+function animateHeader(header) {
+  // Split text into letters
+  var textWrapper = header.querySelector(".letters");
+  if (textWrapper) {
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+  }
+
+  // Anime.js timeline for header
+  anime
+    .timeline({ loop: false })
+    .add({
+      targets: header.querySelectorAll(".line"),
+      scaleX: [0, 1],
+      opacity: [0.5, 1],
+      easing: "easeInOutExpo",
+      duration: 900,
+    })
+    .add({
+      targets: header.querySelectorAll(".letter"),
+      opacity: [0, 1],
+      translateX: [40, 0],
+      translateZ: 0,
+      scaleX: [0.3, 1],
+      easing: "easeOutExpo",
+      duration: 800,
+      offset: "-=600",
+      delay: (el, i) => 150 + 25 * i,
+    });
 }
 
 //VANTA.js animation code ---------------
