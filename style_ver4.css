@@ -1,11 +1,32 @@
 body {
   background-color: #222222;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Comfortaa", sans-serif;
+  font-family: "Expletus Sans", sans-serif;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
 }
+
+button {
+  width: 150px;
+  height: 60px;
+  border: 3px solid white;
+  /*  border-radius: 45px; */
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.2em;
+  font-weight: 550;
+  /* font-family: "Montserrat", sans-serif; */
+}
+
+button:hover {
+  background: #222222;
+  color: white;
+  font-size: 1.5em;
+}
+
 #vanta_back {
   width: 100vw;
   height: 100vh;
@@ -23,7 +44,6 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* z-index: 2; */
 }
 
 .site-content__headline {
@@ -219,6 +239,7 @@ article {
   padding-top: 0.1em;
   padding-right: 0.05em;
   padding-bottom: 0.15em;
+  /* margin-left: 2em; */
 }
 
 .ml14 .line {
@@ -235,4 +256,8 @@ article {
 .ml14 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+.marg {
+  margin-left: 6rem;
 }
