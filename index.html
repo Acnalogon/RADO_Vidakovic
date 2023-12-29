@@ -9,9 +9,12 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Expletus+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Expletus+Sans&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
@@ -56,13 +59,15 @@
       <div id="fullpage">
         <div class="section" data-anchor="Home" id="vanta_back">
           <!-- <h1>About_Me</h1> -->
-            <h1 class="ml14">
-          <span class="text-wrapper marg">
-            <span class="letters">About me</span>
-            <span class="line"></span>
-          </span>
+          <h1 class="ml14">
+            <span class="text-wrapper marg">
+              <span class="letters">About me</span>
+              <span class="line"></span>
+            </span>
           </h1>
-          <button class="marg">Read More</button>
+          <button class="marg butt" data-menuanchor="About_Me">
+            <a href="#About_Me">Read More</a>
+          </button>
         </div>
 
         <div class="section" data-anchor="About_Me">
@@ -106,16 +111,15 @@
           </main>
         </div>
 
-        <div class="section" data-anchor="My_Skills">
+        <div id="mySlidesSection" class="section" data-anchor="My_Skills">
           <section>
             <div class="slide">
-              <!-- <h2>Front_End</h2> -->
               <h2 class="ml14">
-  <span class="text-wrapper">
-    <span class="letters">Front-End</span>
-    <span class="line"></span>
-  </span>
-</h2>
+                <span class="text-wrapper">
+                  <span class="letters">Front-End</span>
+                  <span class="line"></span>
+                </span>
+              </h2>
 
               <article>
                 As a web developer, I have a solid understanding of front-end
@@ -130,14 +134,12 @@
             </div>
 
             <div class="slide">
-              <!-- <h2>Back_End</h2> -->
               <h2 class="ml14">
-  <span class="text-wrapper">
-    <span class="letters">Back-End</span>
-    <span class="line"></span>
-  </span>
-</h2>
-
+                <span class="text-wrapper">
+                  <span class="letters">Back-End</span>
+                  <span class="line"></span>
+                </span>
+              </h2>
 
               <article>
                 In addition to my front-end skills, I am well-versed in back-end
@@ -151,13 +153,12 @@
             </div>
 
             <div class="slide">
-              <!-- <h2>Programming_Languages</h2> -->
               <h2 class="ml14">
-  <span class="text-wrapper">
-    <span class="letters">Programming Languages</span>
-    <span class="line"></span>
-  </span>
-</h2>
+                <span class="text-wrapper">
+                  <span class="letters">Languages</span>
+                  <span class="line"></span>
+                </span>
+              </h2>
 
               <article>
                 I have a strong foundation in programming languages such as Java
@@ -173,48 +174,56 @@
           </section>
         </div>
 
-        <div class="section" data-anchor="Contact_Me">
+        <div class="section" data-anchor="Contact_Me" id="Contact">
           <section>
+            <h2 class="ml14">
+              <span class="text-wrapper">
+                <span class="letters">Contact Me</span>
+                <span class="line"></span>
+              </span>
+            </h2>
             <article>
-            <h2>Contact_Me</h2>
-            <form
-              action="mailto:rado.pro1@protonmail.com"
-              method="POST"
-              enctype="multipart/form-data"
-              name="EmailForm"
-            >
-              <div class="input_flex">
-                <label for="name">Enter your name: </label>
-                <input type="text" name="name" id="name" required />
-              </div>
-              <div>
-                <label for="email">Enter your email:</label>
-                <input type="email" name="email" class="email" required />
-              </div>
-              <div>
-                <input type="text" class="email" />
-              </div>
-              <div>
-                <input type="submit" value="Submit!" id="submit" />
-              </div>
-            </form>
-            <footer class="code_footer">
-              <h2>Contact information:</h2>
-              <ul>
-                <li>Rado Vidakovic Emails:</li>
-                <li>rado.pro1@protonmail.com</li>
-                <li>rad.vidako@gmail.com</li>
-                <li>rado.work21@gmail.com</li>
-              </ul>
-
-              <ul>
-                <li>About_Me</li>
-                <li>My_Skills</li>
-                <li>Contact_Me</li>
-              </ul>
-            </footer>
+              <form
+                action="mailto:rado.pro1@protonmail.com"
+                method="POST"
+                enctype="multipart/form-data"
+                name="EmailForm"
+              >
+                <div class="input_flex">
+                  <label for="name">Name:</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email">Email:</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="text">Text:</label>
+                  <input
+                    type="text"
+                    class="email"
+                    placeholder="Your Message"
+                    required
+                  />
+                </div>
+                <div>
+                  <input type="submit" value="Submit" id="submit" />
+                </div>
+              </form>
+            </article>
           </section>
-          </article>
         </div>
       </div>
     </div>
