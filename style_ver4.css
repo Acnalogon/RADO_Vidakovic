@@ -1,8 +1,8 @@
 body {
-  background-color: #222222;
+  background-color: #702963;
   font-family: "Comfortaa", sans-serif;
   font-family: "Expletus Sans", sans-serif;
-  color: white;
+  color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
@@ -22,7 +22,7 @@ body {
 }
 
 .butt:hover {
-  background: #222222;
+  border: 3px solid #222222;
   color: white;
   font-size: 1.5em;
 }
@@ -34,6 +34,15 @@ body {
   left: 0;
   z-index: -1;
 }
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
 .site-content,
 section {
   max-width: 100vh;
@@ -105,7 +114,7 @@ a {
 }
 
 .nav:after {
-  background: white;
+  background: #702963;
   transition-delay: 0s;
 }
 
@@ -205,18 +214,21 @@ body.nav-active .nav__list-item:nth-child(3) {
 body.nav-active .nav__list-item:nth-child(4) {
   transition-delay: 0.9s;
 }
-
-article span {
-  background-color: white;
-  color: black;
-  padding: 3px 8px;
-}
 /* Initial state of the article */
 article {
+  background-color: transparent;
+  padding: 5px 20px;
+  overflow-y: hidden;
+  color: black;
   opacity: 0;
   transform: translateX(-50px); /* Starts off-screen */
   visibility: hidden; /* Initially hidden, but takes up space */
   transition: all 0.5s ease-in-out;
+}
+article:hover {
+  background-color: #000;
+  color: white;
+  transition-duration: 0.8s;
 }
 
 /* Keyframes for animation */
@@ -231,6 +243,12 @@ article {
 .ml14 {
   font-weight: 200;
   font-size: 3.2em;
+}
+
+.ml14:hover {
+  background-color: #000000;
+  color: white;
+  transition-duration: 0.8s;
 }
 
 .ml14 .text-wrapper {
@@ -248,7 +266,7 @@ article {
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: #fff;
+  background-color: black;
   transform-origin: 100% 100%;
   bottom: 0;
 }
@@ -325,6 +343,18 @@ textarea:valid {
 
 .fp-watermark {
   display: none;
+}
+
+/* For the next arrow */
+.fp-controlArrow.fp-arrow.fp-next {
+  color: black; /* Change the color of the arrow */
+  border-color: transparent transparent transparent black; /* Adjust as needed */
+}
+
+/* For the previous arrow */
+.fp-controlArrow.fp-arrow.fp-prev {
+  color: black; /* Change the color of the arrow */
+  border-color: transparent black transparent transparent; /* Adjust as needed */
 }
 
 @media only screen and (max-width: 600px) {

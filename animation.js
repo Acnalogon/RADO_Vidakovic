@@ -134,7 +134,7 @@ function animateHeader(header) {
 }
 
 //VANTA.js animation code ---------------
-VANTA.DOTS({
+VANTA.NET({
   el: "#vanta_back",
   mouseControls: true,
   touchControls: true,
@@ -145,4 +145,5 @@ VANTA.DOTS({
   scaleMobile: 1.0,
   color: 0xffffff,
   showLines: false,
+  backgroundColor: 0xd0d0d,
 });
