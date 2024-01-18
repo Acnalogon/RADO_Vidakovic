@@ -1,8 +1,8 @@
 body {
-  background-color: #702963;
+  background-color: #91a3b0;
   font-family: "Comfortaa", sans-serif;
   font-family: "Expletus Sans", sans-serif;
-  color: black;
+  color: #0f0f0f;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
@@ -18,11 +18,10 @@ body {
   background: white;
   font-size: 1.2em;
   font-weight: 550;
-  /* font-family: "Montserrat", sans-serif; */
 }
 
 .butt:hover {
-  border: 3px solid #222222;
+  border: 3px solid #0f0f0f;
   color: white;
   font-size: 1.5em;
 }
@@ -40,6 +39,7 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  object-fit: fill;
   z-index: -1;
 }
 
@@ -78,6 +78,7 @@ section {
   background-color: #ffffff;
   margin-bottom: 4px;
   transition: transform 0.2s ease, background-color 0.5s ease;
+  border: 2px solid #0f0f0f;
 }
 
 .menu-icon__line-left {
@@ -97,7 +98,7 @@ section {
 }
 
 a {
-  color: black;
+  color: #0f0f0f;
   text-decoration: none;
 }
 
@@ -107,7 +108,7 @@ a {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: rgba(234, 234, 234, 0.2);
+  background: #cd7f32;
   z-index: -1;
   transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
   transform: translateX(0%) translateY(-100%);
@@ -146,7 +147,7 @@ a {
 .nav__list-item:before {
   content: "";
   position: absolute;
-  background: #000000;
+  background: #0f0f0f;
   width: 20px;
   height: 2.5px;
   top: 100%;
@@ -160,7 +161,7 @@ a {
 }
 
 body.nav-active .menu-icon__line {
-  background-color: #000;
+  background-color: #0f0f0f;
   transform: translateX(0px) rotate(-45deg);
 }
 
@@ -219,15 +220,17 @@ article {
   background-color: transparent;
   padding: 5px 20px;
   overflow-y: hidden;
-  color: black;
+  color: #0f0f0f;
   opacity: 0;
   transform: translateX(-50px); /* Starts off-screen */
   visibility: hidden; /* Initially hidden, but takes up space */
   transition: all 0.5s ease-in-out;
 }
 article:hover {
-  background-color: #000;
+  background-color: #0f0f0f;
   color: white;
+  border-radius: 45px;
+  transition-delay: 0.5s;
   transition-duration: 0.8s;
 }
 
@@ -246,7 +249,7 @@ article:hover {
 }
 
 .ml14:hover {
-  background-color: #000000;
+  background-color: #0f0f0f;
   color: white;
   transition-duration: 0.8s;
 }
@@ -266,7 +269,7 @@ article:hover {
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: black;
+  background-color: #0f0f0f;
   transform-origin: 100% 100%;
   bottom: 0;
 }
@@ -282,13 +285,13 @@ article:hover {
 
 /* Contact Me Section Styles */
 #Contact section {
-  width: auto;
+  width: 60dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #222222;
+  background-color: #cd7f32;
   color: white;
   text-align: center;
 }
@@ -315,7 +318,7 @@ article:hover {
   width: auto;
   padding: 10px 20px;
   font-size: 1.2em;
-  color: rgb(0, 0, 0);
+  color: #0f0f0f;
   background-color: #ffffff;
   border: 2px solid white;
   border-radius: 45px;
@@ -325,7 +328,7 @@ article:hover {
 }
 
 #Contact input[type="submit"]:hover {
-  background-color: #222222;
+  background-color: #0f0f0f;
   color: white;
   font-size: 1.5em;
 }
@@ -347,14 +350,14 @@ textarea:valid {
 
 /* For the next arrow */
 .fp-controlArrow.fp-arrow.fp-next {
-  color: black; /* Change the color of the arrow */
-  border-color: transparent transparent transparent black; /* Adjust as needed */
+  color: #0f0f0f; /* Change the color of the arrow */
+  border-color: transparent transparent transparent #0f0f0f; /* Adjust as needed */
 }
 
 /* For the previous arrow */
 .fp-controlArrow.fp-arrow.fp-prev {
-  color: black; /* Change the color of the arrow */
-  border-color: transparent black transparent transparent; /* Adjust as needed */
+  color: #0f0f0f; /* Change the color of the arrow */
+  border-color: transparent #0f0f0f transparent transparent; /* Adjust as needed */
 }
 
 @media only screen and (max-width: 600px) {
