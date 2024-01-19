@@ -219,19 +219,19 @@ body.nav-active .nav__list-item:nth-child(4) {
 article {
   background-color: transparent;
   padding: 5px 20px;
+  margin-bottom: 14px;
   overflow-y: hidden;
   color: #0f0f0f;
   opacity: 0;
   transform: translateX(-50px); /* Starts off-screen */
   visibility: hidden; /* Initially hidden, but takes up space */
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out !important;
 }
 article:hover {
-  background-color: #0f0f0f;
-  color: white;
-  border-radius: 45px;
-  transition-delay: 0.5s;
-  transition-duration: 0.8s;
+  background-color: white;
+  color: #0f0f0f;
+  border-radius: 42px;
+  transition-duration: 0.8s !important;
 }
 
 /* Keyframes for animation */
