@@ -247,11 +247,13 @@ article:hover {
 .ml14 {
   font-weight: 200;
   font-size: 3.2em;
+  text-align: center;
 }
 
 .ml14:hover {
-  background-color: #0f0f0f;
-  color: white;
+  background-color: white;
+  color: #9966cc;
+  border-radius: 38px;
   transition-duration: 0.8s;
 }
 
@@ -261,7 +263,6 @@ article:hover {
   padding-top: 0.1em;
   padding-right: 0.05em;
   padding-bottom: 0.15em;
-  /* margin-left: 2em; */
 }
 
 .ml14 .line {
@@ -278,10 +279,6 @@ article:hover {
 .ml14 .letter {
   display: inline-block;
   line-height: 1em;
-}
-
-.marg {
-  margin-left: 6rem;
 }
 
 /* Contact Me Section Styles */
