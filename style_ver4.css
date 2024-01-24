@@ -18,6 +18,8 @@ body {
   background: white;
   font-size: 1.2em;
   font-weight: 550;
+  display: block; /* Makes the button a block element */
+  margin: 20px auto; /* Centers the button */
 }
 
 .butt:hover {
@@ -45,7 +47,7 @@ body {
 
 .site-content,
 section {
-  max-width: 100vh;
+  max-width: 130dvh;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -53,6 +55,14 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.section[data-anchor="Home"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .site-content__headline {
@@ -195,7 +205,7 @@ body.nav-active .nav__list-item {
   transform: translateX(0%);
   transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
-
+/* 
 body.nav-active .nav__list-item:nth-child(0) {
   transition-delay: 0.5s;
 }
@@ -214,28 +224,29 @@ body.nav-active .nav__list-item:nth-child(3) {
 
 body.nav-active .nav__list-item:nth-child(4) {
   transition-delay: 0.9s;
-}
-/* Initial state of the article */
+} */
+
 article {
   background-color: transparent;
   padding: 5px 20px;
+  margin-top: 34px;
   margin-bottom: 14px;
   overflow-y: hidden;
-  color: #0f0f0f;
+  color: white;
   opacity: 0;
-  transform: translateX(-50px); /* Starts off-screen */
-  visibility: hidden; /* Initially hidden, but takes up space */
+  transform: translateX(-50px);
+  visibility: hidden;
   transition: all 0.5s ease-in-out !important;
 }
+
 article:hover {
   background-color: white;
   color: #0f0f0f;
-  border: 3px solid #702963;
+  border: 2px solid #702963;
   border-radius: 38px;
   transition-duration: 0.5s !important;
 }
 
-/* Keyframes for animation */
 @keyframes slideIn {
   to {
     transform: translateX(0);
@@ -253,8 +264,10 @@ article:hover {
 .ml14:hover {
   background-color: white;
   color: #9966cc;
+  border: 2px solid #702963;
   border-radius: 38px;
   transition-duration: 0.8s;
+  padding: 0 20px;
 }
 
 .ml14 .text-wrapper {
@@ -281,7 +294,6 @@ article:hover {
   line-height: 1em;
 }
 
-/* Contact Me Section Styles */
 #Contact section {
   width: 60dvh;
   display: flex;
@@ -331,7 +343,6 @@ article:hover {
   font-size: 1.5em;
 }
 
-/* Validation styles */
 input:invalid,
 textarea:invalid {
   border: 2px solid red;
@@ -346,21 +357,24 @@ textarea:valid {
   display: none;
 }
 
-/* For the next arrow */
 .fp-controlArrow.fp-arrow.fp-next {
-  color: #0f0f0f; /* Change the color of the arrow */
-  border-color: transparent transparent transparent #0f0f0f; /* Adjust as needed */
+  color: #0f0f0f;
+  border-color: transparent transparent transparent #0f0f0f;
 }
 
-/* For the previous arrow */
 .fp-controlArrow.fp-arrow.fp-prev {
-  color: #0f0f0f; /* Change the color of the arrow */
-  border-color: transparent #0f0f0f transparent transparent; /* Adjust as needed */
+  color: #0f0f0f;
+  border-color: transparent #0f0f0f transparent transparent;
 }
 
 @media only screen and (max-width: 600px) {
   body {
     font-size: 16px;
+  }
+
+  #vanta_back {
+    width: 100dvh;
+    height: 100dvh;
   }
 
   .ml14 {
@@ -373,7 +387,7 @@ textarea:valid {
 
   .site-content,
   section {
-    max-width: 100%;
+    max-width: 80%;
     padding: 10px;
   }
 
@@ -396,16 +410,16 @@ textarea:valid {
     font-size: 0.9em;
   }
 
+  .lineUp {
+    width: 40dvh;
+    overflow-y: scroll;
+  }
+
   .fp-controlArrow.fp-prev {
     left: 5px;
   }
 
   .fp-controlArrow.fp-next {
     right: 15px;
-  }
-
-  #mySlidesSection {
-    padding-left: 50px;
-    padding-right: 50px;
   }
 }
