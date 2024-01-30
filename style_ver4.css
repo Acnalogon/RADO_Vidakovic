@@ -425,7 +425,7 @@ body.nav-active .nav__list-item:nth-child(4) {
 
   .ml14 {
     font-size: 2em; /* Adjust font size for smaller screens */
-    margin-left: 28vw;
+    /* margin-left: 28vw; */
     width: 80vw;
   }
 
@@ -459,7 +459,7 @@ body.nav-active .nav__list-item:nth-child(4) {
     font-size: 0.8em;
     width: 80vw;
     /* height: 80vh; */
-    margin-left: 30vw;
+    /* margin-left: 30vw; */
     /*  margin-top: 30vh; */
   }
   /* 
