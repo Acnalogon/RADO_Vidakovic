@@ -434,13 +434,13 @@ body.nav-active .nav__list-item:nth-child(4) {
 
   body .section[data-anchor="About_Me"] article {
     font-size: 0.8em;
-    width: 55%;
+    width: 60%;
     margin: 0 auto;
   }
 
   body .section[data-anchor="My_Skills"] article {
     font-size: 0.8em;
-    width: 55%;
+    width: 60%;
     margin: 0 auto;
   }
 
@@ -451,7 +451,7 @@ body.nav-active .nav__list-item:nth-child(4) {
   }
 
   .section[data-anchor="My_Skills"] .fp-controlArrow.fp-next {
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translateX(-50%);
   }
