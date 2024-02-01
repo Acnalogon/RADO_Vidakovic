@@ -1,7 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #9966cc;
   font-family: "Comfortaa", sans-serif;
   font-family: "Expletus Sans", sans-serif;
+  font-size: 16pt;
   color: #0f0f0f;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,8 +25,8 @@ body {
   background: white;
   font-size: 1.2em;
   font-weight: 550;
-  display: block; /* Makes the button a block element */
-  margin: 20px auto; /* Centers the button */
+  display: block;
+  margin: 20px auto;
 }
 
 .butt:hover {
@@ -47,8 +54,8 @@ body {
 
 .site-content,
 section {
-  max-width: 130vh;
-  height: 100vh;
+  max-width: 140vh;
+  height: 90vh;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -88,10 +95,8 @@ article {
   transition: all 0.5s ease-in-out !important;
 }
 
-/* .section[data-anchor="About_Me"] article */
 #about-me {
-  /* width: 130vh; */
-  font-size: 14px;
+  font-size: 16pt;
   overflow-y: scroll;
 }
 
@@ -191,39 +196,31 @@ article:hover {
   border-color: transparent #0f0f0f transparent transparent;
 }
 
-/* Styles for Webkit Browsers like Chrome, Safari */
-/* .section[data-anchor="About_Me"] article */
 #about-me::-webkit-scrollbar {
-  width: 20px; /* Width of the scrollbar */
+  width: 20px;
 }
 
-/* .section[data-anchor="About_Me"] article */
 #about-me::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the track */
+  background: #f1f1f1;
 }
 
-/* .section[data-anchor="About_Me"] article */
 #about-me::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the scrollbar thumb */
+  background: #888;
 }
 
-/* .section[data-anchor="About_Me"]
-  article */
 #about-me::-webkit-scrollbar-thumb :hover {
-  background: #555; /* Color of the scrollbar thumb on hover */
+  background: #555;
 }
 
-/* Styles for Firefox */
-/* .section[data-anchor="About_Me"] article */
 #about-me {
-  scrollbar-width: thin; /* 'auto' or 'thin' */
-  scrollbar-color: #702963 #f1f1f1; /* thumb and track color */
+  scrollbar-width: thin;
+  scrollbar-color: #702963 #f1f1f1;
 }
 
 .container {
   width: 100%;
   height: 100%;
-  --s: 400px; /* control the size */
+  --s: 400px;
   --c1: #702963;
   --c2: white;
   --c3: #9966cc;
@@ -261,7 +258,6 @@ article:hover {
   background-color: black;
   margin-bottom: 4px;
   transition: transform 0.2s ease, background-color 0.5s ease;
-  /* border: 2px solid #0f0f0f; */
 }
 
 .menu-icon__line-left {
@@ -307,7 +303,7 @@ article:hover {
   transform: translate(0%, -50%);
   width: 100%;
   text-align: center;
-  font-size: calc(2vw + 10px);
+  font-size: calc(2vw + 20px);
   font-weight: 200;
   cursor: pointer;
 }
@@ -396,84 +392,67 @@ body.nav-active .nav__list-item:nth-child(4) {
 /******************************************NAV/MENU****************************************************/
 
 @media only screen and (max-width: 768px) {
-  /*  .section[data-anchor="Home"] {
-    width: 100vw;
-    height: 100vh;
-  }
- */
-  #about-me {
-    width: 100vw;
-    overflow-y: scroll;
-  }
-
-  html body {
+  html,
+  body {
     font-size: 16px;
-    width: 100vw;
-    margin-right: 0;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
   }
 
-  .section[data-anchor="Home"] #vanta_back {
-    width: 100vw;
+  body #vanta_back {
+    width: 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
-    top: 0;
-    right: 0;
   }
 
-  .ml14 {
-    font-size: 2em; /* Adjust font size for smaller screens */
-    /* margin-left: 28vw; */
-    width: 80vw;
+  body .section[data-anchor="Home"] .ml14 {
+    width: 100%;
+  }
+  body .ml14 {
+    font-size: 2em;
+    margin: 0 auto;
+    width: 50%;
   }
 
-  .site-content,
-  section {
-    max-width: 100vh;
-    padding: 10px; /* Adjust padding */
-  }
-
-  .menu-icon {
+  body .menu-icon {
     left: 10px;
     top: 10px;
   }
 
-  .butt {
-    width: 100px; /* Adjust button width */
-    height: 40px; /* Adjust button height */
-    font-size: 0.8em; /* Adjust button font size */
-  }
-
-  .nav__list-item {
-    font-size: 0.9em; /* Adjust nav item font size */
-  }
-  /* 
-  .container {
-    width: 100vw;
-    height: 100vh;
-  }
- */
-  .section[data-anchor="My_Skills"] article {
+  body button .butt {
+    width: 100px;
+    height: 40px;
     font-size: 0.8em;
-    width: 80vw;
-    /* height: 80vh; */
-    /* margin-left: 30vw; */
-    /*  margin-top: 30vh; */
-  }
-  /* 
-  .fp-controlArrow.fp-prev,
-  .fp-controlArrow.fp-next {
-    display: block;
-    z-index: 10;
-  }
- */
-  .fp-controlArrow.fp-prev {
-    left: 5px;
+    margin: 20px auto;
   }
 
-  .fp-controlArrow.fp-next {
-    right: 5px;
+  body .nav__list-item {
+    font-size: 0.9em;
+  }
+
+  body .section[data-anchor="About_Me"] article {
+    font-size: 0.8em;
+    width: 55%;
+    margin: 0 auto;
+  }
+
+  body .section[data-anchor="My_Skills"] article {
+    font-size: 0.8em;
+    width: 55%;
+    margin: 0 auto;
+  }
+
+  .section[data-anchor="My_Skills"] .fp-controlArrow.fp-prev {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section[data-anchor="My_Skills"] .fp-controlArrow.fp-next {
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
